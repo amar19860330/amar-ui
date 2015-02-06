@@ -18,9 +18,16 @@ android {
         }
     }
 }
-
+apply plugin: 'android-apt'
+def AAVersion = '3.0.1'
+apt {
+    arguments {
+        androidManifestFile variant.outputs.first().processResources.manifestFile
+        resourcePackageName 'com.amar.android.ui'
+    }
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
-    compile 'com.beardedhen:androidbootstrap:+'
+    compile 'com.beardedhen:androidbootstrap:1.0.6'
 }
