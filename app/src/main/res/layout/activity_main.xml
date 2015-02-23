@@ -124,6 +124,29 @@
                 fontawesometext:fa_icon="fa-user"
                 android:textColor="@color/bbutton_info"/>
 
+            <ImageView
+                android:id="@+id/image_wait_for_load_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/mystyle"
+                android:layout_marginRight="10dp"
+                />
+            <ImageView
+                android:id="@+id/image_wait_for_load_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/mystyle"
+                android:layout_marginRight="10dp"
+                />
+            <ImageView
+                android:id="@+id/image_wait_for_load_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mystyle"
+                android:layout_marginRight="10dp"
+                />
         </LinearLayout>
     </HorizontalScrollView>
 </LinearLayout>

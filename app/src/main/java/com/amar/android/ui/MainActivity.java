@@ -4,9 +4,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.amar.android.ui.R;
 import com.beardedhen.androidbootstrap.FontAwesomeText;
+import com.squareup.picasso.Picasso;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,6 +19,20 @@ public class MainActivity extends ActionBarActivity {
         setContentView( R.layout.activity_main);
 
         initUI();
+
+        initPicasso();
+    }
+
+    void initPicasso()
+    {
+        ImageView image_1 = (ImageView )this.findViewById( R.id.image_wait_for_load_1 );
+        ImageView image_2 = (ImageView )this.findViewById( R.id.image_wait_for_load_2 );
+        ImageView image_3 = (ImageView )this.findViewById( R.id.image_wait_for_load_3 );
+
+        String url = "http://upload.wikimedia.org/wikipedia/commons/4/4d/Angel_Dark.jpg";
+        Picasso.with( this ).load(url).error( R.drawable.ic_launcher ).into(image_1);
+        Picasso.with( this ).load(url).error( R.string.app_name ).into( image_2 );
+        Picasso.with( this ).load(url).into(image_3);
     }
 
 
